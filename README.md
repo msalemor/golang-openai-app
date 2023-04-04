@@ -2,6 +2,15 @@
 
 This is a golang an electronic products content generator using Azure OpenAI.
 
+## Running Locally
+
+- Add the environment files
+- Change folders to `cgenerator` and execute: `sh deploy.sh`
+- Change forlders to `server` and execute: `go run .`
+- Open the browser at: http://localhost:3010
+
+## Running as a container
+
 ## Environment Variables
 
 ## FrontEnd - React - cgenerator - .env.local
