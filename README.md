@@ -13,14 +13,14 @@ This is a golang an electronic products content generator using Azure OpenAI.
 
 ## Environment Variables
 
-## FrontEnd - React - cgenerator - .env.local
+## FrontEnd - React - cgenerator - `.env.local`
 
 ```bash
 APP_PORT=3000
 OPENAI_ENDPOINT=/openAI
 ```
 
-## Backend - Go - Server - .env
+## Backend - Go - Server - `.env`
 
 ```bash
 APP_PORT=3010
