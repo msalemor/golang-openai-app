@@ -1,17 +1,17 @@
-# golang-openai-app
+# Golang Azure OpenAI demo app
 
-A golang content generator using Azure OpenAI
+This is a golang an electronic products content generator using Azure OpenAI.
 
 ## Environment Variables
 
-## cgenerator - .env.local
+## FrontEnd - React - cgenerator - .env.local
 
 ```bash
 APP_PORT=3000
 OPENAI_ENDPOINT=/openAI
 ```
 
-## Server - .env
+## Backend - Go - Server - .env
 
 ```bash
 APP_PORT=3010
