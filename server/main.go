@@ -11,10 +11,23 @@ import (
 	dotenv "github.com/subosito/gotenv"
 )
 
-var app common.App
+var (
+  app common.App
+  port := "3010"
+  addr := "0.0.0.0"
+)
 
 func LoadEnv() {
 	dotenv.Load()
+
+	sport := os.Getenv("APP_PORT")
+	if sport != "" {
+	  port = sport
+        }
+	saddr := os.Getenv("APP_ADDRESS")
+	if saddr != "" {
+	  addr = saddr
+	}
 
 	stemp := os.Getenv("OPENAI_TEMPERATURE")
 	temp, _ := strconv.ParseFloat(stemp, 64)
@@ -60,9 +73,7 @@ func main() {
 		return c.JSON(response)
 	})
 
-	port := os.Getenv("APP_PORT")
-
 	fiberApp.Static("/", "./public", fiber.Static{})
 	log.Info("Starting server on port " + port)
-	fiberApp.Listen(":3010")
+	fiberApp.Listen(addr+":"+port)
 }
